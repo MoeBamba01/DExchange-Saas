@@ -11,13 +11,9 @@ import {
   faUser,
   faRightFromBracket,
   faKey,
-  faTable,
-  faMoon,
-  faSun
+  faTable
 } from '@fortawesome/free-solid-svg-icons'
 import { cn } from '@/lib/utils'
-import { useTheme } from '@/providers'
-import { Switch } from '@/components/ui/switch'
 
 const menuItems = [
   { icon: faHome, label: 'Dashboard', href: '/dashboard', enabled: true },
@@ -35,7 +31,6 @@ const accountItems = [
 
 export default function Sidebar() {
   const pathname = usePathname()
-  const { theme, toggleTheme } = useTheme()
 
   return (
     <div className="h-full w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 flex flex-col">
@@ -51,25 +46,6 @@ export default function Sidebar() {
             DEXCHANGE SAAS
           </span>
         </Link>
-      </div>
-
-      {/* Dark Mode Switch */}
-      <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <FontAwesomeIcon 
-              icon={theme === 'dark' ? faMoon : faSun} 
-              className="w-4 h-4 text-gray-600 dark:text-gray-400"
-            />
-            <span className="text-xs font-medium text-gray-600 dark:text-gray-400">
-              Dark Mode
-            </span>
-          </div>
-          <Switch 
-            checked={theme === 'dark'} 
-            onCheckedChange={toggleTheme}
-          />
-        </div>
       </div>
 
       {/* Menu principal */}
