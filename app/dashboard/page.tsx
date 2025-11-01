@@ -7,7 +7,7 @@ export default function DashboardPage() {
   const { stats, projects, orders } = useDashboard()
 
   return (
-    <div className="space-y-4">
+    <div className="w-full max-w-full overflow-x-hidden px-4 py-4 md:px-6 md:py-6 lg:px-8 lg:py-8 space-y-4">
       {/* Cartes de statistiques */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {stats.map((stat, index) => (

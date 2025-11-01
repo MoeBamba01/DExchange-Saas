@@ -56,17 +56,21 @@ export default function TablesPage() {
   ]
 
   return (
-    <div className="p-4 md:p-6 space-y-4 md:space-y-6">
+    <div className="w-full max-w-full overflow-x-hidden px-4 py-4 md:px-6 md:py-6 lg:px-8 lg:py-8 space-y-4 md:space-y-6">
       {/* Breadcrumb */}
       <div className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
         Pages / <span className="text-gray-800 dark:text-white">Tables</span>
       </div>
 
       {/* Authors Table */}
-      <AuthorsTable authors={authors} />
+      <div className="w-full max-w-full">
+        <AuthorsTable authors={authors} />
+      </div>
 
       {/* Projects Table */}
-      <ProjectsTableFull projects={projectsData} />
+      <div className="w-full max-w-full">
+        <ProjectsTableFull projects={projectsData} />
+      </div>
     </div>
   )
 }

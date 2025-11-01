@@ -102,7 +102,7 @@ export default function DashboardLayout({
         </header>
 
         {/* Contenu de la page */}
-        <main className="p-4 lg:p-8">
+        <main className="min-h-screen">
           {children}
         </main>
       </div>

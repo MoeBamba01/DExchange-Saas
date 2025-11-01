@@ -45,8 +45,9 @@ export function ProjectsTableFull({ projects }: ProjectsTableFullProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
+      className="w-full max-w-full"
     >
-      <Card className="bg-white dark:bg-gray-800 border-0 shadow-sm dark:shadow-gray-900/50">
+      <Card className="bg-white dark:bg-gray-800 border-0 shadow-sm dark:shadow-gray-900/50 w-full max-w-full overflow-hidden">
         <CardHeader>
           <CardTitle className="text-lg font-bold text-gray-800 dark:text-white">Projects</CardTitle>
           <CardDescription className="flex items-center gap-1.5 text-sm">
@@ -59,7 +60,7 @@ export function ProjectsTableFull({ projects }: ProjectsTableFullProps) {
             <span className="text-gray-400 dark:text-gray-500">this month</span>
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="w-full max-w-full overflow-x-hidden">
           {/* Desktop Table */}
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full">

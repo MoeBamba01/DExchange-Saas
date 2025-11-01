@@ -15,12 +15,13 @@ export function AuthorsTable({ authors }: AuthorsTableProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
+      className="w-full max-w-full"
     >
-      <Card className="bg-white dark:bg-gray-800 border-0 shadow-sm dark:shadow-gray-900/50">
+      <Card className="bg-white dark:bg-gray-800 border-0 shadow-sm dark:shadow-gray-900/50 w-full max-w-full overflow-hidden">
         <CardHeader>
           <CardTitle className="text-lg font-bold text-gray-800 dark:text-white">Authors Table</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="w-full max-w-full overflow-x-hidden">
           {/* Desktop Table */}
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full">
